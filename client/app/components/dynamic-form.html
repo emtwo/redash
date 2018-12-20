@@ -5,6 +5,8 @@
                data-test="TargetName" autofocus required>
         <error-messages input="dynamicForm.targetName" form="dynamicForm"></error-messages>
     </div>
+    <label class="control-label" for="dataSourceDescription">Description</label>
+    <input type="string" class="form-control" name="targetDescription" ng-model="target.description">
     <hr>
     <div class="form-group" ng-class='{"has-error": (inner.input | showError), "required": field.property.required}' ng-form="inner" ng-repeat="field in fields">
         <label ng-if="field.property.type !== 'checkbox'" class="control-label">{{field.property.title || field.name | toHuman}}</label>

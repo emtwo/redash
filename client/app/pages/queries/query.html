@@ -87,7 +87,9 @@
           on-select="updateDataSource()" data-test="SelectDataSource">
           <ui-select-match placeholder="Select Data Source...">{{$select.selected.name}}</ui-select-match>
           <ui-select-choices repeat="ds.id as ds in dataSources | filter:$select.search">
-            {{ds.name}}
+            <div title='{{ds.description}}'>
+              {{ds.name}}
+            </div>
           </ui-select-choices>
         </ui-select>
       </div>
