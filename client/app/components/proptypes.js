@@ -17,6 +17,11 @@ export const DataSourceMetadata = PropTypes.shape({
   column_description: PropTypes.string,
 });
 
+export const Query = PropTypes.shape({
+  id: PropTypes.string,
+  name: PropTypes.string,
+});
+
 export const Table = PropTypes.shape({
   columns: PropTypes.arrayOf(PropTypes.string).isRequired,
 });
